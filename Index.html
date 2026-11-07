@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101c35">
+  <title>Mixku Store — Produk Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <img id="logoPreview" src="assets/toko.jpg" alt="Logo toko" onerror="this.style.display='none'">
+      <span id="brandName">Mixku Store</span>
+    </a>
+    <nav>
+      <a href="#produk">Produk</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">DIGITAL CREATIVE STORE</span>
+        <h1>Temukan produk digital<br><span>pilihanmu.</span></h1>
+        <p>Produk dan layanan editing digital dari Mixku Store. Praktis, mudah dipesan, dan siap membantu kebutuhan kreatifmu.</p>
+        <a class="primary-btn" href="#produk">Lihat Produk <span>↗</span></a>
+      </div>
+      <div class="hero-image-wrap">
+        <img id="storePreview" src="assets/toko.jpg" alt="Foto Mixku Store" onerror="this.style.display='none'">
+        <div class="image-caption">MIXKU STORE · DIGITAL GOODS</div>
+      </div>
+    </section>
+
+    <section class="products-section" id="produk">
+      <div class="section-heading">
+        <div><span class="eyebrow">KOLEKSI KAMI</span><h2>Produk digital</h2></div>
+        <p>Pilih produk yang kamu butuhkan.</p>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="about-section" id="tentang">
+      <div>
+        <span class="eyebrow">KENALAN DENGAN KAMI</span>
+        <h2>Kreativitas jadi lebih mudah.</h2>
+      </div>
+      <p>Mixku Store menyediakan produk digital dan jasa editing. Hubungi kami jika ingin bertanya atau melakukan pemesanan.</p>
+    </section>
+
+    <section class="contact-section" id="kontak">
+      <div>
+        <span class="eyebrow">ADA YANG INGIN DITANYAKAN?</span>
+        <h2>Hubungi Mixku Store.</h2>
+        <p>Pesan produk atau konsultasikan kebutuhan editing kamu melalui WhatsApp.</p>
+      </div>
+      <a class="primary-btn" id="contactButton" href="#" target="_blank" rel="noopener">Hubungi WhatsApp ↗</a>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> Mixku Store</span><span>Made for your creativity.</span></footer>
+
+  <!-- Panel pengaturan: upload foto dan ubah data toko tanpa mengedit kode -->
+  <button class="settings-open" id="settingsOpen" title="Pengaturan toko">⚙</button>
+  <aside class="settings-panel" id="settingsPanel" aria-hidden="true">
+    <div class="settings-head"><h3>Pengaturan toko</h3><button id="settingsClose" aria-label="Tutup">×</button></div>
+    <label>Nama toko<input id="shopNameInput" value="Mixku Store"></label>
+    <label>Nomor WhatsApp <small>Gunakan kode negara, contoh 62812xxxx (tanpa +)</small><input id="waInput" placeholder="628xxxxxxxxxx"></label>
+    <label>Foto background<input id="bgUpload" type="file" accept="image/*"></label>
+    <label>Foto toko / logo<input id="shopUpload" type="file" accept="image/*"></label>
+    <p class="settings-note">Foto yang dipilih disimpan di browser perangkat ini. Untuk tampil di semua perangkat, letakkan file foto di folder assets lalu unggah seluruh folder website ke hosting.</p>
+    <button class="save-settings" id="saveSettings">Simpan pengaturan</button>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
